@@ -2,84 +2,82 @@
 
 ## User Interface Design
 
-Voor deze opdracht kies je een User Story waarin een gebruiker iets moet doen, zoals het toevoegen van informatie aan een agenda of stap voor stap door een vragenlijst klikken, een chat-formulier of bijvoorbeeld een filter systeem. 
+Met de User Interface (UI) wordt de ‘voorkant’ van een website of app bedoeld, het gedeelte dat de gebruiker ziet en interactie mee heeft. De UI bestaat uit het ontwerp, de layout met teksten en plaatjes, en interactieve elementen zoals buttons, navigatie en formulieren.
 
+In een goed ontwerp hou je rekening met de gebruiker. Zorg ervoor dat een gebruiker weet wat die kan verwachten en of een interactie gelukt is. Niks is vervelender dan op een knop klikken en er gebeurt niets of iets anders dan je verwacht... Joshua Porter, user experience designer, schrijft:
+
+> Keep users in control by regularly surfacing system status, by describing causation (if you do this that will happen) and by giving insight into what to expect at every turn - Joshua Porter, Principles of User Interface Design
+
+<!-- Zorg ervoor dat een gebruiker weet wat die kan verwachten, *feedforward*, en of een interactie is gelukt, *feedback*.  -->
+
+Deze sprint ga je een interactie ontwerpen en maken, zoals stap voor stap door een vragenlijst klikken, een filter systeem, of een menu open en dicht klappen.
 
 ## Aanpak
 
-Als een gebruiker interactie heeft met een website, moet je goede feedback/feedforward ontwerpen en maken. Zo weet een gebruiker wat die kan verwachten en of de actie gelukt is. 
+Eerst ga je bedenken welke interactie je gaat maken en voor wie. Hiervoor schrijf je een *User Story*.
 
-Voor deze opdracht ga je eerst leren een wireflow te tekenen van de interactie die je wil maken. Dat doe je in de deeltaak [fix-the-flow-wireflow](https://github.com/fdnd-task/fix-the-flow-wireflow). Daarna ga je de interactie coderen met HTML, CSS en JS. Tijdens een code/design review ga je de interactie leren testen met een User test. 
+Daarna ga je de interactie ontwerpen in een *Wireflow*, zodat je goed weet wat je gaat bouwen. 
 
+Voor de interactie heb je JavaScript nodig. Onderzoek eerst het *JavaScript 3-stappenplan* die je nodig hebt en maak een breakdown-schets van je technische plan. 
 
-
-# Wireflow
-
-Teken een Wireflow van een interactief element
+Tijdens de code/design reviews deze sprint krijg je feedback op je code en ga je de interactie leren testen met een User test. 
 
 
-## Doel van deze opdracht
 
-Je leert hoe je User Flow kan tekenen in een Wireflow.
+## User Story 
 
-## Werkwijze
+Voordat je een Wireflow gaat tekenen moet je eerst goed beschrijven wie de gebruiker is en wat de doelen van de gebruiker zijn. Daarna kun je met een *User Story* de interactie beschrijven die je gaat ontwerpen. 
 
-<img width="1355" alt="image" src="https://github.com/fdnd-task/fix-the-flow-wireflow/assets/1391509/2770bc90-9b92-4a16-8b5f-32efcd3b8027">
+Een *User Story* is een korte beschrijving (story) van wat een gebruiker (user) wil. Het is een kort verhaaltje, geschreven vanuit de gebruiker en het maakt duidelijk wat een gebruiker wil. Bijvoobeeld:
 
+*Als een online shopper, wil ik de mogelijkheid hebben om producten te vergelijken, zodat ik de beste keuze kan maken en geld kan besparen.*
 
-Deze opdracht gaat over de [analyse](#analyseren), [ontwerp](#ontwerpen) en [test](#testen) fase van de DLC.
-
-### Analyseren
-
-Voordat je een Wireflow gaat tekenen moet je goed beschrijven wie de gebruiker is en wat de doelen van de gebruiker zijn. Daarna kun je met een _User Story_ de interactie beschrijven die je wil ontwerpen. 
-
-#### Aanpak
+Een User story volg een vaste schrijfwijze: 
+![](user-story.png)
 
 1. Schrijf eerst wie de gebruiker is van jouw opdracht en wat de gebruiker wil bereiken, wat is de _User Goal_?
 2. Schrijf een _User Story_ van een interactieg element: `Als <gebruiker> wil ik <functionaliteit> zodat <meerwaarde>`
+3. Maak een issue aan met de User Story. Hier ga je het ontwerp en uitwerking van de interactie in bijhouden. 
 
-#### Materiaal
+#### Bronnen
 
-- [How User Scenarios  Help to Improve Your UX](http://blog.usabilla.com/how-user-scenarios-help-to-improve-your-ux/)
 - [Wat is een User Story?](https://agilescrumgroup.nl/wat-is-een-user-story/)
 
-### Ontwerpen
 
-Teken een Wireflow die alle mogelijke output, de belangrijkste userflow  en de interactie duidelijk maakt. Een Wireflow toont opeenvolgende wireframes die verschillende states/schermen tonen, op basis van de interactie.
 
-Hieronder staat een  voorbeeld van een Wireflow met de _User Story_ `Als bezoeker wil ik een verhaal kunnen terugvinden door op een woord uit de titel te zoeken`
-    
-![image](https://user-images.githubusercontent.com/1391509/146001069-76346dd9-d579-421d-9bc4-79b5380b7637.png)
+## Wireflow
 
-#### Aanpak
+Voor deze opdracht ga je eerst de interactie uitwerken in een wireflow. Daarna ga je de interactie coderen met HTML, CSS en JS.
+
+Een **Wireflow** toont een aantal schermen van een interactie. Het is nuttig om uit te denken wat een gebruiker te zien krijgt als die iets op een pagina doet, zoals een formulier versturen of met een carrousel verschillende plaatjes of producten bekijkt. 
+
+![Wireflow schets](wireflow-uitleg.png)
+_Met een Wireflow laat je zien hoe een interactie op een pagina eruit komt te zien_
+
+Teken een Wireflow die alle mogelijke output, de belangrijkste userflow  en de interactie duidelijk maakt. Een Wireflow toont opeenvolgende wireframes met de verschillende states/schermen die een gebruiker te zien krijgt.
 
 1. Schets alle mogelijke output (states en/of schermen) die een gebruiker te zien krijgt
-2. Geef met een andere kleur de interactie aan. Op welke elementen klikt een gebruiker? Scrollen of draggen?
+2. Geef met een andere kleur de interactie aan. Op welke elementen klikt een gebruiker? Of scrollen of draggen?
 3. Geef met pijlen de _User Flow_ aan
 4. Geef elke state een nummer en titel
-5. Schrijf onder elke state wat een gebruiker doet en wat de interface moet laten zien
+5. Voeg de wireflow toe aan het issue dat je hebt aangemaakt en bespreek het met een mentor. Schrijf de feedback die je krijgt bij het issue (of laat de mentor feedback schrijven op het issue)
 
-#### Materiaal
+### Bronnen
 
-- [Wireframing User Flow with Wireflows](https://balsamiq.com/learn/articles/wireflows/)
+- [Wireflows: When, Why & How to Use Them](https://medium.com/@webkeyz/wireflows-when-why-how-to-use-them-b4c04d169f81)
 
-### Testen
 
-Met een Wireflow laat je zien hoe een interactie op een website eruit komt te zien. Een Wireflow is voor jezelf, maar ook voor je team waar je mee samen werkt of om een product owner te laten zien hoe een interactie moet gaan werken. Andere mensen moeten je schets kunnen begrijpen. Het is belangrijk dat je netjes schetst, goede labels gebruikt en passende teksten schrijft. 
-    
-#### Aanpak
 
-1. Laat de wireflow aan een tweedejaars zien en spreek de interactie door. 
-2. Is de schets duidelijk? Schrijf op- of aanmerkingen bij je schets.
-3. Verwerk de feedback als dat nodig is.
 
-## Definition of done
+## JavaScript 3 stappenplan
 
-Deze opdracht is *done* als
+Voor het coderen van interactie heb je JavaScript nodig. Met JS kun je een *Click* of bijvoorbeeld *Drag and Drop* detecteren en daar vervolgens iets mee doen...
 
-- [ ] Het is duidelijk wie de gebruiker is 
-- [ ] Er is een _User Story_ geschreven van de interactie
-- [ ] Er is een Wireflow getekend met alle mogelijke output (states en/of schermen)
-- [ ] Alle states hebben een nummer, titel en beschrijving
-- [ ] De _user flow_ en de interactie zijn goed weergegeven
-- [ ] De opdracht is gedocumenteerd in de Wiki van de deeltaak of de leertaak
+1. Maak van je Wireflow een Breakdown schets met de technieken die je nodig hebt voor de interactie.
+2. Gebruik het artikel *Hey designers, if you only know one thing about JavaScript, this is what I would recommend* om te onderzoeken hoe je met HTML, CSS en JS een interactie kan bouwen.
+3. Voeg de Breaddown schets toe aan het issue en bespreek met een mentor of docent of dat haalbaar is. Schrijf feedback op je plan bij het issue.
+4. Code code code.
+ 
+ ### Bronnen
+
+- [Hey designers, if you only know one thing about JavaScript, this is what I would recommend](https://css-tricks.com/videos/150-hey-designers-know-one-thing-javascript-recommend/)

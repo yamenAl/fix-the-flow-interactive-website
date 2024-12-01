@@ -32,7 +32,7 @@ Deze sprint worden weer verschillende workshops aangeboden:
 - [Programming User Interaction](programming-user-interaction.md)
 - [Code/Design review Programming User Interaction](code-design-review-programming-user-interaction.md)
 - [Forms en states ](form-states.md)
-- [Code/Design review User Test](code-design-review-user-test.md)
+- [Code/Design review User Testing](code-design-review-user-testing.md)
 - [Navigeren en labels](navigeren-en-labels.md)
 - [Wrap up](wrap-up.md)
 
