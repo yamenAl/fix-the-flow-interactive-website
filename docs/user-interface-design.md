@@ -10,7 +10,7 @@ In een goed ontwerp hou je rekening met de gebruiker. Zorg ervoor dat een gebrui
 
 <!-- Zorg ervoor dat een gebruiker weet wat die kan verwachten, *feedforward*, en of een interactie is gelukt, *feedback*.  -->
 
-Deze sprint ga je een interactie ontwerpen en maken, zoals stap voor stap door een vragenlijst klikken, een filter systeem, of een menu open en dicht klappen.
+Deze sprint ga je een interactie ontwerpen en bouwen, zoals stap voor stap door een vragenlijst klikken, een filter systeem, of een menu open en dicht klappen.
 
 ## Aanpak
 
@@ -24,20 +24,19 @@ Tijdens de code/design reviews deze sprint krijg je feedback op je code en ga je
 
 
 
-## User Story 
+## User Story
 
-Voordat je een Wireflow gaat tekenen moet je eerst goed beschrijven wie de gebruiker is en wat de doelen van de gebruiker zijn. Daarna kun je met een *User Story* de interactie beschrijven die je gaat ontwerpen. 
+Voordat je een Wireflow gaat tekenen moet je eerst goed beschrijven wie de gebruiker is en wat de doelen van de gebruiker zijn. Daarna kun je met een *User Story* de interactie beschrijven die je gaat ontwerpen.
 
-Een *User Story* is een korte beschrijving (story) van wat een gebruiker (user) wil. Het is een kort verhaaltje, geschreven vanuit de gebruiker en het maakt duidelijk wat een gebruiker wil. Bijvoobeeld:
+Een *User Story* is een korte beschrijving (story) van wat een gebruiker (user) wil. Het is een kort verhaaltje, geschreven vanuit de gebruiker en het maakt duidelijk wat een gebruiker wil. Bijvoobeeld: `Als een online shopper, wil ik de mogelijkheid hebben om producten te vergelijken, zodat ik de beste keuze kan maken en geld kan besparen.`
 
-*Als een online shopper, wil ik de mogelijkheid hebben om producten te vergelijken, zodat ik de beste keuze kan maken en geld kan besparen.*
+Een *User Story* volg een vaste schrijfwijze: 
 
-Een User story volg een vaste schrijfwijze: 
 ![](user-story.png)
 
 1. Schrijf eerst wie de gebruiker is van jouw opdracht en wat de gebruiker wil bereiken, wat is de _User Goal_?
-2. Schrijf een _User Story_ van een interactieg element: `Als <gebruiker> wil ik <functionaliteit> zodat <meerwaarde>`
-3. Maak een issue aan met de User Story. Hier ga je het ontwerp en uitwerking van de interactie in bijhouden. 
+2. Schrijf een _User Story_ van een interactief element dat je wil gaan maken: `Als <gebruiker> wil ik <functionaliteit> zodat <meerwaarde>`
+3. Maak een issue aan met de *User Story*. Hier ga je het ontwerp en uitwerking van de interactie in bijhouden.
 
 #### Bronnen
 
@@ -47,12 +46,12 @@ Een User story volg een vaste schrijfwijze:
 
 ## Wireflow
 
-Voor deze opdracht ga je eerst de interactie uitwerken in een wireflow. Daarna ga je de interactie coderen met HTML, CSS en JS.
+Voor deze opdracht ga je eerst de interactie uitwerken in een Wireflow. Daarna ga je de interactie coderen met HTML, CSS en JS.
 
-Een **Wireflow** toont een aantal schermen van een interactie. Het is nuttig om uit te denken wat een gebruiker te zien krijgt als die iets op een pagina doet, zoals een formulier versturen of met een carrousel verschillende plaatjes of producten bekijkt. 
+Een Wireflow toont een aantal schermen van een interactie. Het is nuttig om uit te denken wat een gebruiker te zien krijgt als die iets op een pagina doet, zoals een filter systeem gebruiken of met een carrousel verschillende plaatjes of producten bekijken.
 
 ![Wireflow schets](wireflow-uitleg.png)
-_Met een Wireflow laat je zien hoe een interactie op een pagina eruit komt te zien_
+_Met een Wireflow laat je zien hoe een interactie op een pagina eruit komt te zien, hier zie je het gebruiken van een zoekformulier om verhalen te vinden._
 
 Teken een Wireflow die alle mogelijke output, de belangrijkste userflow  en de interactie duidelijk maakt. Een Wireflow toont opeenvolgende wireframes met de verschillende states/schermen die een gebruiker te zien krijgt.
 
@@ -71,11 +70,11 @@ Teken een Wireflow die alle mogelijke output, de belangrijkste userflow  en de 
 
 ## JavaScript 3 stappenplan
 
-Voor het coderen van interactie heb je JavaScript nodig. Met JS kun je een *Click* of bijvoorbeeld *Drag and Drop* detecteren en daar vervolgens iets mee doen...
+Voor het bouwen van de interactie heb je JavaScript nodig. Met JS kun je een *Click* of bijvoorbeeld *Drag and Drop* detecteren en daar vervolgens iets mee doen...
 
 1. Maak van je Wireflow een Breakdown schets met de technieken die je nodig hebt voor de interactie.
 2. Gebruik het artikel *Hey designers, if you only know one thing about JavaScript, this is what I would recommend* om te onderzoeken hoe je met HTML, CSS en JS een interactie kan bouwen.
-3. Voeg de Breaddown schets toe aan het issue en bespreek met een mentor of docent of dat haalbaar is. Schrijf feedback op je plan bij het issue.
+3. Voeg de Breakdown schets toe aan het issue en bespreek met een mentor of docent of dat haalbaar is. Schrijf feedback op je plan bij het issue.
 4. Code code code.
  
  ### Bronnen
