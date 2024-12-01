@@ -28,11 +28,11 @@ Schrijf elke sprint nieuwe code, ook al blijven onderdelen van de website hetzel
 Zo leer je beter coderen en nettere code schrijven. 
 -->
 
-### projectboard
+### Projectboard
 
-Koppel het Project Board uit de vorige sprint aan de nieuwe repository, en voeg de plannign van het schema toe. 
+Koppel het projectboard uit de vorige sprint aan de nieuwe repository, en voeg de planning van het schema toe.
 
-Als je het projectboard om *Radmap* zet krijg je een overzicht waarin je taken naar dagen kan slepen. 
+Als je het projectboard op *Roadmap* zet krijg je een overzicht met je taken en een tijdplanning. Je kan dan de taken een tijdspad geven.
 
 ![](ghprojects-example-roadmap.webp)
 *De Roadmap-view van Github projects geeft een overzicht van taken en tijdsplanning.*
