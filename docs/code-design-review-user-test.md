@@ -1,6 +1,6 @@
 # Fix the Flow - Interactive Website
 
-## Code/Design User Test
+## Code/Design User Testing
 
 Voor de Code/Design review ga je jouw interactie testen met een gebruiker. 
 
