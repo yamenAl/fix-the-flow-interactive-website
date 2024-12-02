@@ -16,7 +16,7 @@ Bij deze leertaak horen de deeltaken:
 
 ## Doel van deze opdracht
 
-Je leert hoe je goede interactie kan ontwerpen en maken. 
+Je leert hoe je goede interactie kan ontwerpen en bouwen. 
 
 
 ## Werkwijze
