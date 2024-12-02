@@ -2,13 +2,13 @@
 
 ## Programming User Interacion
 
-3 stappenplan en CSS voor feedback en feedforward
+JavaScript 3 stappenplan en CSS voor het coderen van interactie.
 
 ## Aanpak
 
 Als een gebruiker interactie heeft met een website, moet je goede feedback/feedforward ontwerpen en maken. Zo weet een gebruiker wat die kan verwachten en of de actie gelukt is. 
 
-Je gaat de interactie coderen met JS en CSS. Tijdens de code/design review krijg je feedback op je code en je gaat jouw interactie leren testen met een User test.
+Je gaat de interactie coderen met JS en CSS. Tijdens de code/design review krijg je feedback op je code en je gaat jouw interactie leren testen met een User testing.
 
 
 ### Materiaal
