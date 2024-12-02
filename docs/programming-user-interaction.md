@@ -11,13 +11,6 @@ Als een gebruiker interactie heeft met een website, moet je goede feedback/feedf
 Je gaat de interactie coderen met JS en CSS. Tijdens de code/design review krijg je feedback op je code en je gaat jouw interactie leren testen met een User testing.
 
 
-### Materiaal
-
-- Tutorial  [if you only know one thing about JavaScript, this is what I would recommend](https://css-tricks.com/video-screencasts/150-hey-designers-know-one-thing-javascript-recommend/)
-- [MDN QuerySelector](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
-- [MDN ClassList](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) 
-- [MDN addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
-
 
 <!--
 
@@ -108,3 +101,14 @@ Al deze opdrachten kunnen ook via [een script](https://github.com/fdnd-task/your
 - Doorgaan met interactief leren programmeren? Kijk alvast eens naar https://learnprogramming.online
 
 -->
+
+
+### Bronnen
+
+- [What is JavaScript? MDN beginner's JavaScript course](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
+- [Introduction to the DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
+
+- Tutorial  [if you only know one thing about JavaScript, this is what I would recommend](https://css-tricks.com/video-screencasts/150-hey-designers-know-one-thing-javascript-recommend/)
+- [MDN QuerySelector](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
+- [MDN ClassList](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) 
+- [MDN addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
