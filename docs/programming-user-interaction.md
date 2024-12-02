@@ -2,7 +2,7 @@
 
 ## Programming User Interacion
 
-JavaScript 3 stappenplan en CSS voor het coderen van interactie.
+Leer met het JavaScript 3 stappenplan en CSS interactie coderen.
 
 ## Aanpak
 
