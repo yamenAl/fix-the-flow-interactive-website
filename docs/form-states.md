@@ -2,6 +2,10 @@
 
 ## Forms en states
 
+Feedback en Feedforward leren ontwerpen en bouwen voor formulier. 
+
+## Aanpak
+
 <!--
 Tijdens deze sprint hebben we een gedeelde stylesheet gemaakt. Daarin staan kleuren, typografie en het begin van een aantal formulierelementen beschreven, in de huisstijl van de opdrachtgever. Als de code goed opgezet is—met herbruikbare `classes` en `custom properties`—is de gedeelde stylesheet ook te gebruiken in je eigen project.
 
