@@ -2,7 +2,7 @@
 
 ## Forms en states
 
-Feedback en Feedforward leren ontwerpen en bouwen voor formulier. 
+Feedback en Feedforward leren ontwerpen en bouwen voor formulieren. 
 
 ## Aanpak
 
