@@ -18,7 +18,7 @@ Eerst ga je bedenken welke interactie je gaat maken en voor wie. Hiervoor schrij
 
 Daarna ga je de interactie ontwerpen in een *Wireflow*, zodat je goed weet wat je gaat bouwen. 
 
-Voor de interactie heb je JavaScript nodig. Onderzoek eerst het *JavaScript 3-stappenplan* die je nodig hebt en maak een breakdown-schets van je technische plan. 
+Voor de interactie heb je JavaScript nodig. Onderzoek eerst het *JavaScript 3-stappenplan* dat je nodig hebt, en maak een breakdown-schets van je technische plan. 
 
 Tijdens de code/design reviews deze sprint krijg je feedback op je code en ga je de interactie leren testen met een User test. 
 
@@ -26,16 +26,16 @@ Tijdens de code/design reviews deze sprint krijg je feedback op je code en ga je
 
 ## User Story
 
-Voordat je een Wireflow gaat tekenen moet je eerst goed beschrijven wie de gebruiker is en wat de doelen van de gebruiker zijn. Daarna kun je met een *User Story* de interactie beschrijven die je gaat ontwerpen.
+Voordat je een Wireflow gaat tekenen, moet je eerst goed beschrijven wie de gebruiker is en wat de doelen van de gebruiker zijn. Daarna kun je met een *User Story* de interactie beschrijven die je gaat ontwerpen.
 
-Een *User Story* is een korte beschrijving (story) van wat een gebruiker (user) wil. Het is een kort verhaaltje, geschreven vanuit de gebruiker en het maakt duidelijk wat een gebruiker wil. Bijvoobeeld: `Als een online shopper, wil ik de mogelijkheid hebben om producten te vergelijken, zodat ik de beste keuze kan maken en geld kan besparen.`
+Een *User Story* is een korte beschrijving (story) van wat een gebruiker (user) wil. Het is een kort verhaaltje, geschreven vanuit de gebruiker, en het maakt duidelijk wat een gebruiker wil. Bijvoobeeld: `Als een online shopper, wil ik de mogelijkheid hebben om producten te vergelijken, zodat ik de beste keuze kan maken en geld kan besparen.`
 
 Een *User Story* volg een vaste schrijfwijze: 
 
-![](user-story.png)
+![Als <gebruiker> wil ik <functionaliteit> zodat <meerwaarde>.](user-story.png)
 
 1. Schrijf eerst wie de gebruiker is van jouw opdracht en wat de gebruiker wil bereiken, wat is de _User Goal_?
-2. Schrijf een _User Story_ van een interactief element dat je wil gaan maken: `Als <gebruiker> wil ik <functionaliteit> zodat <meerwaarde>`
+2. Schrijf een _User Story_ van een interactief element dat je wil gaan maken: `Als <gebruiker> wil ik <functionaliteit> zodat <meerwaarde>` — bespreek eventueel met een mentor of docent of dit haalbaar is deze sprint.
 3. Maak een issue aan met de *User Story*. Hier ga je het ontwerp en uitwerking van de interactie in bijhouden.
 
 #### Bronnen
@@ -53,7 +53,7 @@ Een Wireflow toont een aantal schermen van een interactie. Het is nuttig om uit 
 ![Wireflow schets](wireflow-uitleg.png)
 _Met een Wireflow laat je zien hoe een interactie op een pagina eruit komt te zien, hier zie je het gebruiken van een zoekformulier om verhalen te vinden._
 
-Teken een Wireflow die alle mogelijke output, de belangrijkste userflow  en de interactie duidelijk maakt. Een Wireflow toont opeenvolgende wireframes met de verschillende states/schermen die een gebruiker te zien krijgt.
+Teken een Wireflow die alle mogelijke output, de belangrijkste userflow en de interactie duidelijk maakt. Een Wireflow toont opeenvolgende wireframes met de verschillende states/schermen die een gebruiker te zien krijgt.
 
 1. Schets alle mogelijke output (states en/of schermen) die een gebruiker te zien krijgt
 2. Geef met een andere kleur de interactie aan. Op welke elementen klikt een gebruiker? Of scrollen of draggen?
@@ -70,7 +70,7 @@ Teken een Wireflow die alle mogelijke output, de belangrijkste userflow  en de 
 
 ## JavaScript 3 stappenplan
 
-Voor het bouwen van de interactie heb je JavaScript nodig. Met JS kun je een *Click* of bijvoorbeeld *Drag and Drop* detecteren en daar vervolgens iets mee doen... Dit noemen we het 3 stappenplan: Eerst selecteer je de elementen die je nodig hebt voor de interactie, daarna voeg je een event toe om de interactie te detecteren, als laatste koppel je een CSS class met een animatie of iets anders. 
+Voor het bouwen van de interactie heb je JavaScript nodig. Met JS kun je een *Click* of bijvoorbeeld *Drag and Drop* detecteren en daar vervolgens iets mee doen... Dit noemen we het 3 stappenplan: Eerst _selecteer_ je de elementen die je nodig hebt voor de interactie, daarna voeg je een _event_ toe om de interactie te detecteren, als laatste koppel je een _CSS class_ met een animatie of iets anders. 
 
 1. Maak van je Wireflow een Breakdown schets met de technieken die je nodig hebt voor de interactie.
 2. Gebruik het artikel *Hey designers, if you only know one thing about JavaScript, this is what I would recommend* om te onderzoeken hoe je met HTML, CSS en JS een interactie kan bouwen.
