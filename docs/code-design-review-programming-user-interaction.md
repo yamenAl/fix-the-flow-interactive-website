@@ -2,7 +2,7 @@
 
 ## Code/Design Programming User Interacion
 
-3 stappenplan en CSS voor feedback en feedforward
+Je gaat de interactie coderen met JS en CSS. Tijdens de code/design review krijg je feedback op het JavaScript 3 stappenplan en CSS.
 
 ## Aanpak
 
