@@ -2,6 +2,7 @@
 
 ## Forms en states
 
+<!--
 Tijdens deze sprint hebben we een gedeelde stylesheet gemaakt. Daarin staan kleuren, typografie en het begin van een aantal formulierelementen beschreven, in de huisstijl van de opdrachtgever. Als de code goed opgezet is—met herbruikbare `classes` en `custom properties`—is de gedeelde stylesheet ook te gebruiken in je eigen project.
 
 Met formulierelementen hebben we nog niet veel gedaan, maar dat gaan we in deze workshop veranderen.
@@ -52,3 +53,4 @@ Via de `accent-color` property in CSS kun je de huisstijl van de opdrachtgever r
 - [:focus @ MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus)
 - [:user-invalid @ MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/:user-invalid)
 
+-->
