@@ -14,7 +14,9 @@ Deze sprint ga je verder met de opdracht. Je gaat de feedback verwerken die je h
 Teken een schema op het whiteboard voor de komende 3 weken.
 Bekijk het programma van Sprint 5 en neem de belangrijke momenten en opdrachten uit het programma op in het schema. 
 
-De sprint review in sprint 5 is de laatste keer dit semester dat je de opdrachtgever spreekt. Kan je al bedenken wat je dan wil laten zien? Belangrijke momenten zijn ook de code/design reviews op vrijdag, wat moet je dan af hebben? 
+De sprint review in sprint 5 is de laatste keer dit semester dat je de opdrachtgever spreekt. 
+Kan je al bedenken wat je dan wil laten zien? 
+Belangrijke momenten zijn ook de code/design reviews op vrijdag, wat wil je dan af hebben? 
 
 Bekijk ook de deeltaken "UI Events" en "JS Fundamentals" die op het programma staan. Bedenk wanneer je hier aan gaat werken en voeg deze toe aan het schema. 
 
