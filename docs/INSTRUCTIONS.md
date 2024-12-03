@@ -16,7 +16,7 @@ Bij deze leertaak horen de deeltaken:
 
 ## Doel van deze opdracht
 
-Je leert hoe je goede interactie kan ontwerpen en maken. 
+Je leert hoe je goede interactie kan ontwerpen en bouwen. 
 
 
 ## Werkwijze
@@ -43,6 +43,6 @@ Deze opdracht is done als:
 
 - [ ] De website staat op GitHub en heeft een live url
 - [ ] Je hebt gestructureerd gewerkt met behulp van de development-lifecycle en je hebt het proces bijgehouden in jouw Learning Journal
-- [ ] Je hebt een interactie gecodeerd en het proces en eindresultaat gedocumenteerd in de Readme
+- [ ] Je hebt een interactie gecodeerd en het eindresultaat gedocumenteerd in de Readme
 - [ ] Je hebt een code/design review gedaan, issues aangemaakt en de feedback verwerkt
-- [ ] Je hebt een user test gedaan en de test gedocumenteerd door ...
+- [ ] Je hebt een user test gedaan en de test gedocumenteerd in een issue
