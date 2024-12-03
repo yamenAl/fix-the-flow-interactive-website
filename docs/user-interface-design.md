@@ -70,7 +70,12 @@ Teken een Wireflow die alle mogelijke output, de belangrijkste userflow  en de 
 
 ## JavaScript 3 stappenplan
 
-Voor het bouwen van de interactie heb je JavaScript nodig. Met JS kun je een *Click* of bijvoorbeeld *Drag and Drop* detecteren en daar vervolgens iets mee doen... Dit noemen we het 3 stappenplan: Eerst selecteer je de elementen die je nodig hebt voor de interactie, daarna voeg je een event toe om de interactie te detecteren, als laatste koppel je een CSS class met een animatie of iets anders. 
+Voor het bouwen van de interactie heb je JavaScript nodig. 
+Met JS kun je een *Click* of bijvoorbeeld *Drag and Drop* detecteren en daar vervolgens iets mee doen... 
+Dit noemen we het 3 stappenplan: 
+Eerst selecteer je de elementen die je nodig hebt voor de interactie, 
+daarna voeg je een event toe om de interactie te detecteren, 
+als laatste koppel je een CSS class met een animatie of iets anders. 
 
 1. Maak van je Wireflow een Breakdown schets met de technieken die je nodig hebt voor de interactie.
 2. Gebruik het artikel *Hey designers, if you only know one thing about JavaScript, this is what I would recommend* om te onderzoeken hoe je met HTML, CSS en JS een interactie kan bouwen.
