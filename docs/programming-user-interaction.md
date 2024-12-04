@@ -100,7 +100,7 @@ En waarschijnlijk zijn er nog meer manieren waarop je dit kunt doen. Maar de bas
 
 In Stap 3 geef je feedback aan de gebruiker. Vaak doe je dit door iets te veranderen op de pagina, iets toe te voegen, iets te animeren, ergens heen te scrollen, iets te openen, een geluidje af te spelen, etc. In de meeste gevallen wil je de CSS van een bepaald HTML element veranderen, of een _class_ aan- of uitzetten.
 
-Je weet dat je op elk HTML element een _class_ kunt zetten, en misschien inmiddels ook dat je _meerdere_ classes op een HTML kunt zetten, bijvoorbeeld: `<section class="about font-large">...</section>`. Elk element heeft dus een _lijst_ van classes, vaak met één class. Via de `classList` _property_ van een DOM element, heb je in JavaScript toegang tot die lijst. Een aantal voorbeelden:
+Je weet dat je op elk HTML element een _class_ kunt zetten, en misschien inmiddels ook dat je _meerdere_ classes op een HTML kunt zetten, bijvoorbeeld: `<section class="about font-large">...</section>`. Elk element heeft dus een _lijst_ classes (vaak met maar één class). Via de `classList` _property_ van een DOM element, heb je in JavaScript toegang tot die lijst. Een aantal voorbeelden:
 
 ```js
 document.body.classList.add('dark-mode'); // → <body class="dark-mode">
@@ -132,7 +132,7 @@ In CSS pak je zo'n class dan weer op, met een class selector. In JavaScript heb 
 
 ### Opdracht
 
-Selecteer via de Console, met behulp van `document.querySelector()`, het element waarop je jouw interactie wilt laten werken, en toggle een class op dat element. Controleer of dat gelukt is via de Inspector.
+Selecteer via de Console, met behulp van `document.querySelector()`, het element waarop je jouw interactie wilt laten werken, en toggle een class op dat element, door de `classList` te gebruiken. Controleer of dat gelukt is via de Inspector.
 
 ### Bronnen
 
@@ -157,12 +157,12 @@ Hoe de browser alle `<p>` elementen selecteert, daar hoef je je nu niet druk ove
 Als je ditzelfde in JavaScript zou willen doen, moet je elke stap uitschrijven:
 
 ```js
-// 1. Selecteer alle p elementen, en sla die op in een variabele
+// Selecteer alle p elementen, en sla die op in een variabele
 let pElementen = document.querySelectorAll('p');
 
-// 2a. Wandel langs alle p elementen
+// Wandel langs alle p elementen
 pElementen.forEach(function(pElement) {
-    // 2b. En verander de stijl voor elk p element
+    // En verander de stijl voor elk p element
     pElement.style.color = 'red';
     // (Dit is overigens geen goed idee; je kunt dit beter via een
     // classList.toggle() doen, en je styling in CSS zelf houden)
@@ -250,7 +250,7 @@ De code was dus niet fout, het deed alleen net iets anders dan je verwachtte. Le
 
 ### Opdrachten
 
-Schrijf het plan voor je micro-interactie in _comments_ uit in een JavaScript bestand, dat je via een `<script>` tag linkt aan je code. Als je al JavaScript uit een eerdere (video) tutorial hebt, of ChadGPT al iets voor je hebt laten schrijven, is dit het moment om dat weg te gooien, opnieuw te beginnen, en nieuwe dingen te leren.
+Schrijf het plan voor je micro-interactie in _comments_ uit in je JavaScript bestand, dat je via een `<script>` tag linkt aan je code. Als je al JavaScript uit een eerdere (video) tutorial hebt, of ChadGPT al iets voor je hebt laten schrijven, is dit het moment om dat weg te gooien, opnieuw te beginnen, en nieuwe dingen te leren.
 
 Vraag op je plan in comments feedback van een docent of mentor, en werk je interactie uit aan de hand van het 3 stappenplan. Laat je comments gewoon staan bij je code, zodat je inzichtelijk maakt hoe je te werk bent gegaan, en eventuele (denk)foutjes makkelijk terug kunt vinden.
 
