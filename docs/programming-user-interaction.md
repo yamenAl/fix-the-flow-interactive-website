@@ -13,25 +13,23 @@ Als een gebruiker interactie heeft met een website, moet je goede feedback/feedf
 Je gaat de interactie coderen met JS en CSS. Tijdens de code/design review krijg je feedback op je code en je gaat jouw interactie leren testen met een User Test.
 
 
+## Console
+
+Voordat we weer verder gaan met zelf JavaScript schrijven, heb je nog een aantal tools nodig. De _Console_ van je browser developer tools ga je veel zien, dus laten we daar eerst in duiken, net als in week 1 van de opleiding.
+
+### Bronnen
+
+- [console @ MDN](https://developer.mozilla.org/en-US/docs/Web/API/console)
+
+
 ## Het Document Object Model (DOM)
 
-De afgelopen vier sprints heb je voornamelijk gewerkt met HTML en CSS. Met HTML bouw je zoals je weet _documenten_, en met JavaScript gaan we een micro-interactie toevoegen aan die documenten. Met JavaScript heb je toegang tot het volledige _Document Object Model_ (de _DOM_). Alle HTML die je schrijft, wordt als een boomstructuur (een _tree_) door de browser intern bijgehouden.
-
-<!-- TODO -->
+De afgelopen vier sprints heb je voornamelijk gewerkt met HTML en CSS. Met HTML bouw je zoals je weet _documenten_, en met JavaScript gaan we een micro-interactie toevoegen aan die documenten. Met JavaScript heb je toegang tot het volledige _Document Object Model_ (de _DOM_). Alle HTML die je schrijft, wordt als een boomstructuur (een _tree_) door de browser intern bijgehouden. In je developer tools en in de Console kun je de DOM onderzoeken.
 
 ### Bronnen
 
 - [Introduction to the DOM @ MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
 
-
-## Console
-
-<!-- TODO -->
-
-### Bronnen
-
-
-- [console @ MDN](https://developer.mozilla.org/en-US/docs/Web/API/console)
 
 ## Het 3 stappenplan, waarmee je (bijna) alles kan
 
@@ -117,6 +115,9 @@ In CSS pak je zo'n class dan weer op, met een class selector. In JavaScript heb 
 }
 ```
 
+### Opdracht
+
+Selecteer via de Console het element waarop je jouw interactie wilt laten werken, en toggle een class op dat element.
 
 ### Bronnen
 
@@ -144,16 +145,97 @@ Als je ditzelfde in JavaScript zou willen doen, moet je elke stap uitschrijven:
 // 1. Selecteer alle p elementen, en sla die op in een variabele
 let pElementen = document.querySelectorAll('p');
 
-// 2. Wandel langs alle p elementen
+// 2a. Wandel langs alle p elementen
 pElementen.forEach(function(pElement) {
-    // 3. En verander de stijl voor elk p element
+    // 2b. En verander de stijl voor elk p element
     pElement.style.color = 'red';
     // (Dit is overigens geen goed idee; je kunt dit beter via een
     // classList.toggle() doen, en je styling in CSS zelf houden)
 });
 ```
 
-Zeker in het begin is dit even wennen. Wat enorm helpt bij deze nieuwe taal, is de verschillende stappen die je wilt nemen eerst uitschrijven als _comments_, zoals in het voorbeeld hierboven. Zelfs als je nog niet welke code je moet schrijven, kun je op deze manier wel al een plan maken, en om hints of feedback vragen over hoe je dit probleem op kunt lossen. (Wees zorgvuldig met ChatGPT om hulp vragen, want die maakt het vaak ingewikkelder dan nodig. Ook ontbreekt er vaak context, die jij wél weet.)
+Zeker in het begin is dit even wennen. Wat enorm helpt bij deze nieuwe taal, is de verschillende stappen die je wilt nemen eerst uitschrijven als _comments_, zoals in het voorbeeld hierboven. Zelfs als je nog niet weet welke code je moet schrijven, kun je op deze manier wel al een plan maken, en om hints of feedback vragen over hoe je dit probleem op kunt lossen. (Wees zorgvuldig met ChadGPT om hulp vragen, want die maakt het vaak ingewikkelder dan nodig. Ook ontbreekt er vaak context, die jij wél weet.)
+
+Vergeet niet dat HTML, CSS en JS alledrie andere regels hebben, omdat het totaal verschillende talen zijn. Als je in HTML en CSS per ongeluk een tikfout maakt, negeert een browser die vaak, en gaat die gewoon door met de rest van de pagina. In JS gaat het bij een tikfout iets sneller mis. Zodra de browser een fout in JS tegenkomt, wordt de rest niet meer uitgevoerd, en zie je een fout in je console. Controleer die dus regelmatig als iets niet werkt. Gebruik de console ook voor het _debuggen_ van je code en het controleren van je aannames. Zie dit voorbeeld:
+
+<details>
+<summary>De HTML en CSS bij dit voorbeeld, inclusief een 🍔-menu</summary>
+```html
+<h1>Welkom op mijn website</h1>
+
+<nav id="menu">
+    <h2>Hoofdmenu</h2>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/over">Over</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+</nav>
+<a href="#menu">🍔</a>
+
+<section>
+    <h2>Inhoudsopgave</h2>
+    <ul>
+        <li><a href="#stap-1">Stap 1</a></li>
+        <li><a href="#stap-2">Stap 2</a></li>
+        <li><a href="#stap-3">Stap 3</a></li>
+    </ul>
+    ...
+</section>
+```
+```css
+/* Een simpel hamburger menu, verborgen op kleine schermen, open op grotere schermen */
+#menu {
+    display: none;
+    &:target {
+        display: block;
+    }
+    @media (min-width: 40em) {
+        display: block;
+        + a {
+            display: none;
+        }
+    }
+}
+/* Mijn micro-interactie geeft de inhoudsopgave straks een gele fade.. */
+section ul.highlighted {
+    background: yellow;
+}
+```
+</details>
+
+```js
+// Deze code doet het niet, maar ik snap niet waarom niet, en ik krijg geen error in de console..
+
+// Selecteer de inhoudsopgave
+let tableOfContents = document.querySelector('ul');
+
+// Highlight de boel
+tableOfContents.classList.add('highlighted');
+```
+
+In dit geval kan het handig zijn om `console.log()` te gebruiken, en het resultaat te inspecteren:
+
+```js
+// Selecteer de inhoudsopgave
+let tableOfContents = document.querySelector('ul');
+
+// Eens kijken wat er nou geselecteerd is
+console.log(tableOfContents); // → “Ah, dit selecteert natuurlijk de <ul> uit de nav, niet die uit de <section>!”
+
+// Highlight de boel
+tableOfContents.classList.add('highlighted');
+```
+
+De code was dus niet fout, het deed alleen net iets anders dan je verwachtte. Leer jezelf het gebruik van `console.log()` in je code aan, en test regelmatig je werk.
+
+### Opdracht
+
+Schrijf het plan voor je micro-interactie in _comments_ uit in een JavaScript bestand, dat je via een `<script>` tag linkt aan je code. Als je al JavaScript uit een eerdere (video) tutorial hebt, of ChadGPT al iets voor je hebt laten schrijven, is dit het moment om dat weg te gooien, opnieuw te beginnen, en nieuwe dingen te leren.
+
+Vraag op je plan in comments feedback van een docent of mentor, en werk je interactie uit aan de hand van het 3 stappenplan. Laat je comments gewoon staan bij je code, zodat je inzichtelijk maakt hoe je te werk bent gegaan, en eventuele (denk)foutjes makkelijk terug kunt vinden.
+
+Het kan goed zijn dat je vaak switcht tussen HTML, CSS en JS. Ouwe frontendert!
 
 <!--
 
@@ -236,17 +318,13 @@ Al deze opdrachten kunnen ook via [een script](https://github.com/fdnd-task/your
 2. Maak een issue aan bij je leertaak, bedenk een goede titel voor je interactie, en beschrijf deze kort. Voeg ook een breakdown schets toe.
 3. Vraag feedback op je issue en je breakdown schets.
 
-### Bronnen en materiaal
-
-- [What is JavaScript? MDN beginner's JavaScript course](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [Introduction to the DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
-- [Hey designers, if you only know one thing about JavaScript, this is what I would recommend](https://css-tricks.com/videos/150-hey-designers-know-one-thing-javascript-recommend/)
-- Doorgaan met interactief leren programmeren? Kijk alvast eens naar https://learnprogramming.online
 
 -->
 
 
 ### Bronnen
 
+- [Use JavaScript within a webpage @ MDN](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_JavaScript_within_a_webpage)
+- [Comments in JS @ MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#comments)
 - [JS Fundamentals @ FDND](https://github.com/fdnd-task/js-fundamentals)
 - [What is JavaScript? MDN beginner's JavaScript course](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
