@@ -6,13 +6,154 @@ Leer met het JavaScript 3 stappenplan en CSS interactie coderen.
 
 ## Aanpak
 
-Als een gebruiker interactie heeft met een website, moet je goede feedback/feedforward ontwerpen en maken. Zo weet een gebruiker wat die kan verwachten en of de actie gelukt is. 
+Als een gebruiker interactie heeft met een website, moet je goede feedback/feedforward ontwerpen en maken. Zo weet een gebruiker wat die kan verwachten, en of de actie gelukt is. 
 
 > Micro-interactions communicate status and provide feedback, enhance the sense of direct manipulation, help people visualize the results of their actions. - Dmytro Svarytsevych, [7 secrets for enhancing UX with micro-interactions](https://www.dreamerux.com/articles/35y5fyrr4pifhbondc7r636nkvyoqg)
 
-Je gaat de interactie coderen met JS en CSS. Tijdens de code/design review krijg je feedback op je code en je gaat jouw interactie leren testen met een User testing.
+Je gaat de interactie coderen met JS en CSS. Tijdens de code/design review krijg je feedback op je code en je gaat jouw interactie leren testen met een User Test.
 
 
+## Het Document Object Model (DOM)
+
+De afgelopen vier sprints heb je voornamelijk gewerkt met HTML en CSS. Met HTML bouw je zoals je weet _documenten_, en met JavaScript gaan we een micro-interactie toevoegen aan die documenten. Met JavaScript heb je toegang tot het volledige _Document Object Model_ (de _DOM_). Alle HTML die je schrijft, wordt als een boomstructuur (een _tree_) door de browser intern bijgehouden.
+
+<!-- TODO -->
+
+### Bronnen
+
+- [Introduction to the DOM @ MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
+
+
+## Console
+
+<!-- TODO -->
+
+### Bronnen
+
+
+- [console @ MDN](https://developer.mozilla.org/en-US/docs/Web/API/console)
+
+## Het 3 stappenplan, waarmee je (bijna) alles kan
+
+Stap 1 van ons stappenplan is het _selecteren_ van een geschikt element, waarmee we onze interactie gaan _activeren_. Je wilt bijvoorbeeld dat als iemand op een button klikt (of deze met het toetsenbord activeert), er iets gebeurt op de pagina. Je HTML ziet er bijvoorbeeld zo uit:
+
+```html
+<button class="show-more">Toon meer</button>
+<p>Dit wordt nog niet getoond.</p>
+```
+
+In CSS heb je die button met een _class selector_ als _feedforward_ ronde hoeken, een pointer en een icoontje gegeven, zodat de gebruiker weet dat er iets te doen is:
+
+```css
+.show-more {
+    border-radius: .4em;
+    cursor: pointer;
+    &::after {
+        content: ' ⬇️' / '';
+    }
+    + p {
+        display: none;
+    }
+}
+```
+
+In JavaScript kun je dit element _selecteren_ met `document.querySelector()`, gecombineerd met de _class selector_ hierboven. Het resultaat kun je in een _variabele_ opslaan, die je net als bij CSS _custom properties_ kunt noemen zoals je wilt. Met het `let` _keyword_ maak je een variabele aan:
+
+```js
+let showMoreButton = document.querySelector('.show-more');
+````
+
+Aan de `document.querySelector()` _functie_ geef je dus een _CSS selector_ mee als _string_ (tussen 'aanhalingstekens'). Dit kan _elke_ selector zijn die je ook in CSS kunt gebruiken. Vervolgens kun je hier iets mee doen.
+
+Stap 2: Wacht tot de gebruiker ook echt iets doet. In veel gevallen gaat dit om wachten op het _click event_; je wilt dat er iets gebeurt als iemand op jouw button klikt. Hiervoor kun je met `addEventListener()` een _event_ toevoegen aan jouw element. Komende maandag gaan we hier dieper op in, maar voor nu is het belangrijk om dit te begrijpen:
+
+```js
+let doSomething = function() {
+    alert('Het werkt!');
+}
+
+showMoreButton.addEventListener('click', doSomething);
+```
+
+We hebben een _functie_ aangemaakt en in een variabele opgeslagen, genaamd `doSomething` (die je ook hier kunt noemen zoals je wilt). Met `addEventListener` hebben we die functie gekoppeld aan het _click event_. Hierdoor wordt de `doSomething` functie _aangeroepen_, zodra iemand op de button klikt. Dit hadden we ook met een _anonieme functie_ kunnen schrijven, wat hetzelfde doet:
+
+```js
+showMoreButton.addEventListener('click', function() {
+    alert('Het werkt!');
+});
+```
+
+En waarschijnlijk zijn er nog meer manieren waarop je dit kunt doen. Maar de basis voor stap 2 is `addEventListener`, een _event_ (vaak `'click'`), en een _callback_ functie, die later aangeroepen wordt.
+
+In Stap 3 geef je feedback aan de gebruiker. Vaak doe je dit door iets te veranderen op de pagina, iets toe te voegen, iets te animeren, ergens heen te scrollen, iets te openen, een geluidje af te spelen, etc. In de meeste gevallen wil je de CSS van een bepaald HTML element veranderen, of een _class_ aan- of uitzetten.
+
+Je weet dat je op elk HTML element een _class_ kunt zetten, en misschien inmiddels ook dat je _meerdere_ classes op een HTML kunt zetten, bijvoorbeeld: `<section class="about font-large">...</section>`. Elk element heeft dus een _lijst_ van classes, vaak met één class. Via de `classList` _property_ van een DOM element, heb je in JavaScript toegang tot die lijst. Een aantal voorbeelden:
+
+```js
+document.body.classList.add('dark-mode'); // → <body class="dark-mode">
+
+document.querySelector('section').classList.remove('font-large'); // → <section class="about">
+
+document.querySelector('h1').classList.toggle('highlighted'); // → <h1 class="highlighted">, <h1 class="">, <h1 class="highlighted">, <h1 class="">, <h1 class="highlighted">...
+```
+
+In dit geval willen we waarschijnlijk zoiets:
+
+```js
+let showMoreButton = document.querySelector('.show-more');
+showMoreButton.addEventListener('click', function() {
+    showMoreButton.classList.add('showing-more');
+});
+```
+
+In CSS pak je zo'n class dan weer op, met een class selector. In JavaScript heb je dus vaak maar een paar regels code nodig om iets interactiefs te maken. Transities en animaties kun je verder helemaal in CSS doen, en je kunt je volledig richten op goede en duidelijke feedforward en feedback. Uiteindelijk maak je de dingen voor eindgebruikers, en ziet vrijwel niemand de code die je schrijft :-)
+
+```css
+.showing-more {
+    display: none;
+    + p {
+        display: block;
+    }
+}
+```
+
+
+### Bronnen
+
+- [If you only know one thing about JavaScript, this is what I would recommend](https://css-tricks.com/video-screencasts/150-hey-designers-know-one-thing-javascript-recommend/)
+- [querySelector @ MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
+- [addEventListener @ MDN](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+- [classList @ MDN](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) 
+
+
+## Van Comments naar Code
+
+JavaScript is een _imperatieve_ programmeertaal. Dit houdt in dat je alle opdrachten die uitgevoerd worden zelf moet schrijven, in de volgorde die jij wilt. HTML en CSS zijn _declaratief_, waarmee je vooral beschrijft _wat_ er moet gebeuren, maar niet _hoe_. Dit maakt coderen in JavaScript heel anders. In CSS beschrijf je bijvoorbeeld zoiets:
+
+```css
+p {
+    color: red;
+}
+```
+
+Hoe de browser alle `<p>` elementen selecteert, daar hoef je je nu niet druk over te maken.
+
+Als je ditzelfde in JavaScript zou willen doen, moet je elke stap uitschrijven:
+
+```js
+// 1. Selecteer alle p elementen, en sla die op in een variabele
+let pElementen = document.querySelectorAll('p');
+
+// 2. Wandel langs alle p elementen
+pElementen.forEach(function(pElement) {
+    // 3. En verander de stijl voor elk p element
+    pElement.style.color = 'red';
+    // (Dit is overigens geen goed idee; je kunt dit beter via een
+    // classList.toggle() doen, en je styling in CSS zelf houden)
+});
+```
+
+Zeker in het begin is dit even wennen. Wat enorm helpt bij deze nieuwe taal, is de verschillende stappen die je wilt nemen eerst uitschrijven als _comments_, zoals in het voorbeeld hierboven. Zelfs als je nog niet welke code je moet schrijven, kun je op deze manier wel al een plan maken, en om hints of feedback vragen over hoe je dit probleem op kunt lossen. (Wees zorgvuldig met ChatGPT om hulp vragen, want die maakt het vaak ingewikkelder dan nodig. Ook ontbreekt er vaak context, die jij wél weet.)
 
 <!--
 
@@ -108,9 +249,4 @@ Al deze opdrachten kunnen ook via [een script](https://github.com/fdnd-task/your
 ### Bronnen
 
 - [What is JavaScript? MDN beginner's JavaScript course](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [Introduction to the DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
 
-- Tutorial  [if you only know one thing about JavaScript, this is what I would recommend](https://css-tricks.com/video-screencasts/150-hey-designers-know-one-thing-javascript-recommend/)
-- [MDN QuerySelector](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
-- [MDN ClassList](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) 
-- [MDN addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
