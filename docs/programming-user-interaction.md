@@ -248,5 +248,5 @@ Al deze opdrachten kunnen ook via [een script](https://github.com/fdnd-task/your
 
 ### Bronnen
 
+- [JS Fundamentals @ FDND](https://github.com/fdnd-task/js-fundamentals)
 - [What is JavaScript? MDN beginner's JavaScript course](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-
