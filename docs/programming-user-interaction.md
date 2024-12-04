@@ -158,10 +158,18 @@ Zeker in het begin is dit even wennen. Wat enorm helpt bij deze nieuwe taal, is 
 
 Vergeet niet dat HTML, CSS en JS alledrie andere regels hebben, omdat het totaal verschillende talen zijn. Als je in HTML en CSS per ongeluk een tikfout maakt, negeert een browser die vaak, en gaat die gewoon door met de rest van de pagina. In JS gaat het bij een tikfout iets sneller mis. Zodra de browser een fout in JS tegenkomt, wordt de rest niet meer uitgevoerd, en zie je een fout in je console. Controleer die dus regelmatig als iets niet werkt. Gebruik de console ook voor het _debuggen_ van je code en het controleren van je aannames. Zie dit voorbeeld:
 
-<details>
-<summary>De HTML en CSS bij dit voorbeeld, inclusief een 🍔-menu</summary>
+```js
+// Deze code doet het niet, maar ik snap niet waarom niet, en ik krijg geen error in de console..
 
-De HTML:
+// Selecteer de inhoudsopgave
+let tableOfContents = document.querySelector('ul');
+
+// Highlight de boel
+tableOfContents.classList.add('highlighted');
+```
+
+<details>
+<summary>De HTML en CSS voor dit JS voorbeeld, inclusief een 🍔-menu</summary>
 
 ```html
 <h1>Welkom op mijn website</h1>
@@ -187,8 +195,6 @@ De HTML:
 </section>
 ```
 
-En de CSS:
-
 ```css
 /* Een simpel hamburger menu, verborgen op kleine schermen, open op grotere schermen */
 #menu {
@@ -210,16 +216,6 @@ section ul.highlighted {
 ```
 
 </details>
-
-```js
-// Deze code doet het niet, maar ik snap niet waarom niet, en ik krijg geen error in de console..
-
-// Selecteer de inhoudsopgave
-let tableOfContents = document.querySelector('ul');
-
-// Highlight de boel
-tableOfContents.classList.add('highlighted');
-```
 
 In dit geval kan het handig zijn om `console.log()` te gebruiken, en het resultaat te inspecteren:
 
