@@ -59,7 +59,7 @@ In JavaScript kun je dit element _selecteren_ met `document.querySelector()`, ge
 
 ```js
 let showMoreButton = document.querySelector('.show-more');
-````
+```
 
 Aan de `document.querySelector()` _functie_ geef je dus een _CSS selector_ mee als _string_ (tussen 'aanhalingstekens'). Dit kan _elke_ selector zijn die je ook in CSS kunt gebruiken. Vervolgens kun je hier iets mee doen.
 
@@ -160,6 +160,9 @@ Vergeet niet dat HTML, CSS en JS alledrie andere regels hebben, omdat het totaal
 
 <details>
 <summary>De HTML en CSS bij dit voorbeeld, inclusief een 🍔-menu</summary>
+
+De HTML:
+
 ```html
 <h1>Welkom op mijn website</h1>
 
@@ -183,6 +186,9 @@ Vergeet niet dat HTML, CSS en JS alledrie andere regels hebben, omdat het totaal
     ...
 </section>
 ```
+
+En de CSS:
+
 ```css
 /* Een simpel hamburger menu, verborgen op kleine schermen, open op grotere schermen */
 #menu {
@@ -202,6 +208,7 @@ section ul.highlighted {
     background: yellow;
 }
 ```
+
 </details>
 
 ```js
