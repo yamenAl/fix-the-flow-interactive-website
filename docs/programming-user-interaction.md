@@ -22,7 +22,7 @@ De afgelopen vier sprints heb je voornamelijk gewerkt met HTML en CSS. Met HTML 
 Het _inspecteren_ van elementen heb je dus al vaak gedaan. Als je in de Inspector een element selecteert, krijg je hier in de Console een referentie heen, via een _variabele_ genaamd `$0`. Je kunt hiermee de DOM onderzoeken.
 
 
-### Opdracht
+### Opdrachten
 
 Ga in de browser naar je eigen project, open de Console en schrijf op het whiteboard uit hoeveel elementen de pagina waar je aan werkt bestaat. Dit kun je doen door `document.querySelectorAll('*').length` uit te voeren.
 
@@ -248,7 +248,7 @@ tableOfContents.classList.add('highlighted');
 
 De code was dus niet fout, het deed alleen net iets anders dan je verwachtte. Leer jezelf het gebruik van `console.log()` in je code aan, en test regelmatig je werk.
 
-### Opdracht
+### Opdrachten
 
 Schrijf het plan voor je micro-interactie in _comments_ uit in een JavaScript bestand, dat je via een `<script>` tag linkt aan je code. Als je al JavaScript uit een eerdere (video) tutorial hebt, of ChadGPT al iets voor je hebt laten schrijven, is dit het moment om dat weg te gooien, opnieuw te beginnen, en nieuwe dingen te leren.
 
