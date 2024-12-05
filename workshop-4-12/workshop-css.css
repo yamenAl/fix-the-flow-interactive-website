@@ -1,0 +1,10 @@
+.show-more {
+    border-radius: .4em;
+    cursor: pointer;
+    &::after {
+        content: ' ⬇️' / '';
+    }
+    + p {
+        display: none;
+    }
+}

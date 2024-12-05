@@ -1,0 +1,152 @@
+/* Schrijf hier de verschillende stijlen, die gedeeld gaan
+   worden door jullie projecten */
+   @font-face {
+    font-family: 'formlettertype' ;
+    src: url(fonts\BellotaText-Light.otf);
+}
+
+/* Kleuren */
+:root {
+    color-scheme: light dark;
+  
+    --light: white;
+    --light-code: tomato;
+    --light-button: #f9ff1e;
+    --light-filter-button:#464646;
+    --light-hover-button:#000000;
+    --light-hover-button-text:#ffffff;
+    --light-form-field:white;
+  
+    --dark: black;
+    --dark-code: gold;
+    --dark-button: #ED3CBA;
+    --dark-filter-button:#878787;
+    --dark-hover-button:#ffffff;
+    --dark-hover-button-text:#000000;
+    --dark-form-field:#9c9c9c;
+
+    --primary-button:rgba(255, 255, 255, .4); 
+    --accent-grey: #464646;
+    --accent-light-blue: #79aafa;
+    --accent-pink: #ED3CBA;
+    --accent-light-orange: #ffc200;
+    --accent-yellow: #f9ff1e;
+    --main-white:white;
+    --main-black:black;
+
+}
+
+* {
+    background-color: light-dark(var(--light), var(--dark));
+    color: light-dark(var(--dark), var(--light));
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.main-color-white{
+    background-color: var(--main-white);
+}
+
+.main-color-black{
+    background-color: var(--main-black);
+}
+
+.accent-color-button{
+    background-color: var(--accent-grey);
+}
+
+.main-button-color{
+    background-color: var(--accent-yellow);
+}
+
+.accent-color-one{
+    background-color: var(--accent-light-blue);
+}
+
+.accent-color-two{
+    background-color: var(--accent-pink);
+}
+
+.accent-color-three{
+    background-color:var(--accent-light-orange);
+}
+
+
+
+/* Typografie */
+code {
+    color: light-dark(var(--light-code), var(--dark-code));
+}
+
+
+
+
+/* Formulier elementen */
+input{
+    background-color: light-dark(var(--light-form-field), var(--dark-form-field));
+    /* font-family:formlettertype ; */
+    margin: 0.5rem;
+}
+
+input:checked{
+   font-weight: bold; 
+}
+
+.labelradio:not(:has(input:checked)){
+    opacity: 25%;
+}
+
+body:has(.labelradio:has(input:checked)) {
+    opacity: 0.5;
+}
+
+
+
+
+/* Buttons */
+.button{
+    --spacing:0.5rem;
+    background-color: light-dark(var(--light-button), var(--dark-button));
+    color: light-dark(var(--dark), var(--light));
+    padding: var(--spacing);
+    margin: var(--spacing);
+    border: 2px;
+    border-style: solid; 
+
+    &:hover{
+        background-color: light-dark(var(--light-hover-button), var(--dark-hover-button));
+        color: light-dark(var(--light-hover-button-text), var(--dark-hover-button-text));
+    }  
+}
+
+.primary-button{
+    --spacing:0.5rem;
+    background-color: light-dark (var(--primary-button));
+    color: light-dark(var(--dark), var(--light));
+    padding: var(--spacing);
+    margin: var(--spacing);
+    border: 2px;
+    border-style: solid; 
+
+    &:hover{
+        background-color: light-dark(var(--light-hover-button), var(--dark-hover-button));
+        color: light-dark(var(--light-hover-button-text), var(--dark-hover-button-text));
+    }  
+
+}
+
+.filter-button{
+    --spacing:0.5rem;
+    background-color: light-dark(var(--light-filter-button), var(--dark-filter-button));
+    color: var(--light);
+    padding: var(--spacing);
+    margin: var(--spacing);
+
+    &:hover{
+        background-color: light-dark(var(--light-hover-button), var(--dark-hover-button));
+        color: light-dark(var(--light-hover-button-text), var(--dark-hover-button-text));
+    }  
+   
+}
