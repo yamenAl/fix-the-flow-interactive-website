@@ -36,30 +36,6 @@ for (let i = 0; i < 10; i++) {
 }
 
 // Drag to scroll 
-scrollContainer.addEventListener('mousedown', (e) => {
-  isDragging = true;
-  startX = e.pageX - scrollContainer.offsetLeft;
-  startY = e.pageY - scrollContainer.offsetTop;
-  scrollLeft = scrollContainer.scrollLeft;
-  scrollTop = scrollContainer.scrollTop;
-  e.preventDefault();
-});
-scrollContainer.addEventListener('mouseleave', () => {
-  isDragging = false;
-});
-scrollContainer.addEventListener('mouseup', () => {
-  isDragging = false;
-});
-scrollContainer.addEventListener('mousemove', (e) => {
-  if (!isDragging) return;
-  e.preventDefault();
-  const x = e.pageX - scrollContainer.offsetLeft;
-  const y = e.pageY - scrollContainer.offsetTop;
-  const walkX = (x - startX) * 2; // Increase scroll speed 
-  const walkY = (y - startY) * 2;
-  scrollContainer.scrollLeft = scrollLeft - walkX;
-  scrollContainer.scrollTop = scrollTop - walkY;
-});
 /*test*/
 document.addEventListener('DOMContentLoaded', () => {
   const images = document.querySelectorAll('.grid img'); // Select all images
@@ -94,4 +70,24 @@ document.addEventListener('DOMContentLoaded', () => {
 let showMoreButton = document.querySelector('.all-objects');
 showMoreButton.addEventListener('click', function() {
     alert('Het werkt!');
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.radio-option').forEach((radio) => {
+    radio.addEventListener('change', function () {
+      // Hide all labels
+      document.getElementById('label-adult-resident').style.display = 'none';
+      document.getElementById('label-child').style.display = 'none';
+      document.getElementById('label-student').style.display = 'none';
+
+      // Show the corresponding label
+      if (this.value === 'adult-resident') {
+        document.getElementById('label-adult-resident').style.display = 'block';
+      } else if (this.value === 'child') {
+        document.getElementById('label-child').style.display = 'block';
+      } else if (this.value === 'student') {
+        document.getElementById('label-student').style.display = 'block';
+      }
+    });
+  });
 });

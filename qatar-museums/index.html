@@ -19,7 +19,7 @@
           <a href="#whats-on">الفعاليات<br>What'S ON </a>
           <a href="#collection"> المقتنيات<br>Collection</a>
           <a href="#visit">زيارة<br>Visit</a>
-          <a href="#tickets" class="button">Tickets</a>
+          <a href="tickets.html" class="button">Tickets</a>
         </div>
         <div class="right-nav">
           <a href="#members" class="members"><img class="person-logo" src="assets/icons/person-icon.png" alt="person icon" >Members</a>
@@ -35,7 +35,7 @@
               <a href="#tickets">Tickets</a>
               <a href="#members">Members</a>
               <a href="arabic-index.html">العربية</a>
-            </div>
+            </div>  
           </div>
         </div>
       </nav>
@@ -72,10 +72,18 @@
         <button class="filter-button" onclick="approach1Fn('tapestry')">Tapestry</button>
         <button class="filter-button" onclick="approach1Fn('glass')">Glass</button>
       </div>
+      <!--
       <div class="footer-search">
         <input type="text" placeholder="Search the collection" name="search">
-        <button type="submit"><i class="fa fa-search"></i></button>
+        <button type="submit"></button>
       </div>
+      -->
+      <form class="footer-search">
+        <fieldset>
+          <input required type="text" placeholder="Search the collection" name="search">
+          <button type="submit" ><i class="fa fa-search"></i>Zoek!</button>
+        </fieldset>
+      </form>
     </footer>
   </body>
 </html>

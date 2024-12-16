@@ -87,30 +87,7 @@ main {
   grid-column: span 2;
  
 }
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-}
 
-.grid img {
-  width: calc(20% - 10px);
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px;
-  cursor: pointer;
-  @media (max-width: 768px)  {
-    .grid img {
-      flex: 1 1 calc(50% - 10px);
-    
-  }
-  @media (max-width: 480px) {
-    .grid img {
-      flex: 1 1 calc(100% - 10px); /* One photo  */
-    }
-  }}
-}
 .grid img:hover{
   transform: scale(1.1);
   box-shadow:0 4px 15px rgba(0, 0, 0, 0.2) ;
