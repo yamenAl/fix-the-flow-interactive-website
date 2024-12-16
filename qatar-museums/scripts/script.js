@@ -1,3 +1,5 @@
+console.log('\n %cMade with %c♥%c by Yamen \n', 'font: 16px serif;', 'font: 13px serif; color: #f00;', 'font: 16px serif;')
+
 function approach1Fn(className) {
   const boxes = document.querySelectorAll('.box');
   boxes.forEach(box => {
@@ -72,22 +74,4 @@ showMoreButton.addEventListener('click', function() {
     alert('Het werkt!');
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.radio-option').forEach((radio) => {
-    radio.addEventListener('change', function () {
-      // Hide all labels
-      document.getElementById('label-adult-resident').style.display = 'none';
-      document.getElementById('label-child').style.display = 'none';
-      document.getElementById('label-student').style.display = 'none';
-
-      // Show the corresponding label
-      if (this.value === 'adult-resident') {
-        document.getElementById('label-adult-resident').style.display = 'block';
-      } else if (this.value === 'child') {
-        document.getElementById('label-child').style.display = 'block';
-      } else if (this.value === 'student') {
-        document.getElementById('label-student').style.display = 'block';
-      }
-    });
-  });
-});
+console.log('\n %cMade with %c♥%c by Yamen \n', 'font: 16px serif;', 'font: 13px serif; color: #f00;', 'font: 16px serif;')
