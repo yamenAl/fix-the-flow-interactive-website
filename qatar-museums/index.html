@@ -11,7 +11,6 @@
   </head>
   <body>
     <header>
-      
       <nav class="topbar">
         <img class="logo" src="assets/photos/qatar-logo.jpg" alt="Qatar logo" >
         <div class="nav-links">
@@ -19,71 +18,74 @@
           <a href="#whats-on">الفعاليات<br>What'S ON </a>
           <a href="#collection"> المقتنيات<br>Collection</a>
           <a href="#visit">زيارة<br>Visit</a>
-          <a href="tickets.html" class="button">Tickets</a>
+          <a href="tickets.html" class="button" id="ticket-button">Tickets</a>
         </div>
         <div class="right-nav">
           <a href="#members" class="members"><img class="person-logo" src="assets/icons/person-icon.png" alt="person icon" >Members</a>
           <a href="#venues">Venues</a>
           <a href="arabic-index.html">العربية</a>
-          <div class="dropdown">
-            <button class="dropbtn">Menu</button>
-            <div class="dropdown-content">
-              <a href="#stories">Stories</a>
-              <a href="#whats-on">What's On</a>
-              <a href="#collection">Collection</a>
-              <a href="#visit">Visit</a>
-              <a href="#tickets">Tickets</a>
-              <a href="#members">Members</a>
-              <a href="arabic-index.html">العربية</a>
-            </div>  
-          </div>
-        </div>
-      </nav>
+          <nav class="navbar">
+            <div class="hamburger-menu" id="hamburger-menu">
+              <div class="hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <span class="menu-text">MENU</span>
+            </div>
+            <div class="side-menu" id="side-menu">
+              <button class="close-btn" id="close-btn">&times;</button>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </nav>
     </header>
     <main>
-      
-      <div class="scroll-container          ">
-        <div class="grid gallery" id="photo-grid">
-          <img class="box pottery" src="assets/photos/qatar-mus-1.jpg" alt="Photo 1" data-description="This is the description for Photo 1">
-          <img class="box islamic" src="assets/photos/qatar-mus-2.jpg" alt="Photo 2" data-description="This is the description for Photo 2">
-          <img class="box tapestry" src="assets/photos/qatar-mus-9.jpg" alt="Photo 3">
-          <img class="box Glass" src="assets/photos/qatar-mus-4.jpg" alt="Photo 4">
-          <img class="box pottery" src="assets/photos/qatar-mus-5.jpg" alt="Photo 5">
-          <img class="box islamic" src="assets/photos/qatar-mus-6.jpg" alt="Photo 6">
-          <img class="box tapestry"src="assets/photos/qatar-mus-7.jpg" alt="Photo 7">
-          <img class="box glass"src="assets/photos/qatar-mus-8.jpg" alt="Photo 8">
-          <img class="box islamic"src="assets/photos/qatar-mus-3.jpg" alt="Photo 9">
-          <img class="box pottery"src="assets/photos/qatar-mus-10.jpg" alt="Photo 10">
-        </div>
-        <div id="popup" class="popup">
-          <div class="popup-content">
-            <span id="close-popup">&times;</span>
-            <img id="popup-image" src="" alt="Popup Image">
-            <p id="popup-text"></p>
-          </div>
+      <div class="scroll-container">
+        <div class="gallery" id="photo-gallery">
+          <img class="box pottery" src="assets/photos/qatar-mus-1.jpg" alt="Pottery Example" data-category="pottery">
+          <img class="box islamic" src="assets/photos/qatar-mus-2.jpg" alt="Photo 2" data-description="This is the description for Photo 2" tabindex="0">
+          <img class="box tapestry" src="assets/photos/qatar-mus-9.jpg" alt="Photo 3" tabindex="0">
+          <img class="box Glass" src="assets/photos/qatar-mus-4.jpg" alt="Photo 4" tabindex="0">
+          <img class="box pottery" src="assets/photos/qatar-mus-5.jpg" alt="Photo 5" tabindex="0">
+          <img class="box islamic" src="assets/photos/qatar-mus-6.jpg" alt="Photo 6" tabindex="0">
+          <img class="box tapestry"src="assets/photos/qatar-mus-7.jpg" alt="Photo 7" tabindex="0">
+          <img class="box glass"src="assets/photos/qatar-mus-8.jpg" alt="Photo 8" tabindex="0">
+          <img class="box islamic"src="assets/photos/qatar-mus-3.jpg" alt="Photo 9" tabindex="0">
+          <img class="box pottery"src="assets/photos/qatar-mus-10.jpg" alt="Photo 10" tabindex="0">
         </div>
       </div>
     </main>
-    <footer class="footer">
+ 
+    
+    <footer>
       <div class="footer-filters">
-        <button class="filter-button" onclick="approach1Fn('box')">All Objects</button>
-        <button class="filter-button" onclick="approach1Fn('pottery')">Pottery</button>
-        <button class="filter-button" onclick="approach1Fn('islamic')">Islamic Art</button>
-        <button class="filter-button" onclick="approach1Fn('tapestry')">Tapestry</button>
-        <button class="filter-button" onclick="approach1Fn('glass')">Glass</button>
+        <button class="filter-button" onclick="filterImages('all')">All Objects</button>
+        <button class="filter-button" onclick="filterImages('pottery')">Pottery</button>
+        <button class="filter-button" onclick="filterImages('islamic')">Islamic Art</button>
+        <button class="filter-button" onclick="filterImages('tapestry')">Tapestry</button>
+        <button class="filter-button" onclick="filterImages('glass')">Glass</button>
       </div>
+      
+
       <!--
       <div class="footer-search">
         <input type="text" placeholder="Search the collection" name="search">
         <button type="submit"></button>
       </div>
-      -->
-      <form class="footer-search">
-        <fieldset>
-          <input required type="text" placeholder="Search the collection" name="search">
-          <button type="submit" ><i class="fa fa-search"></i>Zoek!</button>
-        </fieldset>
-      </form>
+          -->
+        <form class="footer-search">
+          <fieldset class="search">
+            <div class="input-container">
+              <input required type="text" placeholder="Search the collection" name="search">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+          </fieldset>
+        </form>
     </footer>
   </body>
 </html>

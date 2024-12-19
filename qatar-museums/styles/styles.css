@@ -1,5 +1,7 @@
 * {
-	box-sizing:border-box;	
+	box-sizing:border-box;
+  font-weight: bold;
+	
 }
 
 
@@ -9,10 +11,25 @@ body {
 	margin:0;
 	display:grid;
 }
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 header{
   display: grid;
-  background-color: white;
   max-height: 12vh;
   grid-row: 1;
   grid-column: span 2;
@@ -46,8 +63,6 @@ header{
 
 .nav-links a {
   text-decoration: none;
-  color: black;
-  font-size: 16px;
   padding: 10px;
   
 }
@@ -63,95 +78,46 @@ header{
 
 }
 
-.dropdown {
-  position: relative;
+
+.scroll-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll; 
+  @media (min-width: 0px) and (max-width: 768px) {
+    width: 150vw;
+    height: 150vh;
+  }
 }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-main {
-  width: 100%;
-	overflow:auto;
-  grid-row: 2;
-  grid-column: span 2;
- 
-}
-
-.grid img:hover{
-  transform: scale(1.1);
-  box-shadow:0 4px 15px rgba(0, 0, 0, 0.2) ;
-}
 .gallery {
-  display: grid; /* Use grid layout */
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
-  gap: 1em; /* Space between images */
-  background-color: #fff;
-  padding: 1em;
-}
-
-/* Images inside the gallery */
-.gallery img {
-  --aspect-ratio: 1; /* Default aspect ratio */
-  width: 100%; /* Full width of the grid item */
-  aspect-ratio: var(--aspect-ratio);
-  object-fit: cover; /* Crop to fill the space */
-  scroll-snap-align: center; /* Align to the center in scroll */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
-  border-radius: 10px; /* Optional rounded corners */
-}
-
-/* Hover effect */
-.gallery img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow effect */
-}
-
-/* Dynamic aspect ratios for specific images */
-.gallery img:nth-of-type(2n) {
-  --aspect-ratio: 1.3;
-}
-
-.gallery img:nth-of-type(3n) {
-  --aspect-ratio: 1.6;
-}
-
-.gallery img:nth-of-type(5n) {
-  --aspect-ratio: 1.9;
-}
-
-.gallery img:nth-of-type(7n) {
-  --aspect-ratio: 0.8;
-}
-
-.gallery img:nth-of-type(9n) {
-  --aspect-ratio: 1.7;
-}
-
-
-ul {	
   display: grid;
-	margin: 0px;
-	padding: 1em;
-  position:absolute;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* عرض الصور كبير */
+  grid-auto-rows: 200px; 
+  gap: 5px; 
+  position: relative;
+  width: 300vw;
+  height: 300vh; 
 }
 
-li {
-  overflow: hidden;
+.gallery img {
+  width: 100%;
   height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/*for tap*/
+.gallery img:focus {
+  outline: 2px solid #f9ff1e; 
+  transform: scale(1.05); 
+  transition: transform 0.2s ease, outline 0.2s ease;
 }
 
-
+.gallery img:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
 
 footer {
   background-color: rgba(0, 0, 0, 0); 
@@ -166,35 +132,64 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 15px;
-  z-index: 10; 
+  gap: 1vh;
+  z-index: 10;
+  @media (min-width: 0px) and (max-width: 768px) {
+    height: 30vh;
+  }
 }
 .footer-filters{
   background-color: transparent !important;
 }
-
-
+/* تصميم النموذج */
 .footer-search {
   display: flex;
-  justify-content: center;
-  margin: 0 auto 5vh auto;
+  justify-content: center; 
+  margin: 20px 0; 
+  
+}
+.filter-button{
+  cursor: pointer;
+
+  
 }
 
-.footer-search input {
-  width: 100%;
-  padding: 12px;
+.search {
+  display: flex; 
+  align-items: center; 
   border: none;
-  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  
 }
 
-
-.footer-search button {
-  padding: 15px 30px;
+.search input {
+  padding: 15px; 
+  font-size: 1.2rem; 
   border: none; 
-  float: left;
- 
+  border-bottom: 2px solid #ccc; 
+  outline: none; 
+  border-radius: 0; 
+  flex: 1; 
+  transition: border-color 0.3s ease;
 }
 
+.search input:focus {
+  border-bottom: 2px solid #333;   
+}
+
+.search button {
+  padding: 15px 25px;    
+  font-size: 1.2rem; 
+  border: none; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease;
+  border-radius: 0; 
+}
+
+.search button:hover {
+  background-color: #555;    
+}
 @media (max-width: 480px) {
   body > header{
     max-height: 15vh;
@@ -214,56 +209,97 @@ footer {
 }
 
 
-/* When dragging, show grabbing cursor */
-.popup {
-  display: none; /* Initially hidden */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+.hamburger-menu {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  @media (min-width: 769px) {
+    .nav-links {
+      display: flex; 
+      flex-direction: row;
+      position: static;
+      background-color: transparent;
+    }
+  
+    .hamburger {
+      display: none;
+      }
+  } 
+    
+}
+
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+.hamburger-icon span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  transition: all 0.3s ease;
+}
+
+.menu-text {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.side-menu {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
+  right: -250px; 
+  width: 250px;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.popup-content {
-  background: white;
+  color: #fff;
   padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  position: relative;
-  max-width: 400px;
-  width: 90%;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease;
+  z-index: 1000;
 }
 
-.popup-content img {
-  max-width: 300px; 
-  max-height: 300px; 
-  width: auto; 
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Align properly */
-  margin: 0 auto 15px auto; /* Center the image */
-  object-fit: contain; /* Ensure the image fits without cropping */
-  border-radius: 8px; /* Rounded corners */
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
 }
 
-#close-popup {
+.side-menu li {
+  margin: 15px 0;
+}
+
+.side-menu a {
+  text-decoration: none;
+}
+
+.side-menu.open {
+  right: 0;  
+}
+
+
+.close-btn {
   position: absolute;
   top: 10px;
-  right: 15px;
-  font-size: 20px;
-  font-weight: bold;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #000000;
   cursor: pointer;
 }
+input{
+  cursor: pointer;
 
-#popup-text {
-  font-size: 16px;
-  margin: 0;
-}
-
-button:active {
-  background-color: red;
 }
