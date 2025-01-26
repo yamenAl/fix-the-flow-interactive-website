@@ -3,18 +3,32 @@ Ontwerp en maak een interactieve website voor een opdrachtgever.
 
 De instructie vind je in: [INSTRUCTIONS.md](https://github.com/fdnd-task/fix-the-flow-interactive-website/blob/main/docs/INSTRUCTIONS.md)
 
-# Titel
-<!-- Geef je project een titel en schrijf in één zin wat het is -->
+# fix-the-flow-interactive-website
 
-## Beschrijving
-<!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
 
-## Kenmerken
-<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? -->
 
-## Bronnen
+## Filter
+Filters images and load new photo location every time refresh.
+Scroll down to automatically load more images.
+
+<img width="200vm" src="https://github.com/user-attachments/assets/c437b715-8331-4daf-b5f8-6fa2d8bcb8f5">
+<img width="200vm" src="https://github.com/user-attachments/assets/427bad14-d097-4dc3-a9a0-2486b8a5833f">
+Images are dynamically added to the page via JavaScript.
+Smooth filtering is achieved without requiring page reloads.
+https://github.com/yamenAl/fix-the-flow-interactive-website/blob/8e4e72f10b118d94283d89865bd47bf47090e503/qatar-museums/scripts/script.js#L17-L58
+
+
+## Hamburger Menu
+Displays and hides the navigation menu for a responsive design.
+Interactions:
+Click on the hamburger icon to open or close the menu.
+<img width="200vm" src="https://github.com/user-attachments/assets/8e96119b-ee22-48c1-8991-8577df796c01">
+<img width="200vm" src="https://github.com/user-attachments/assets/ba8335d6-e7ca-4ea3-a97b-fb0189ed8394">
+
+## Language Switch (Arabic)
+Adds a language toggle to switch between English and Arabic.
+
+
 
 ## Licentie
 
